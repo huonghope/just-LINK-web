@@ -990,6 +990,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('candidate', e.candidate, {
             local: getSocket().id,
             remote: socketID,
+            userId: userUtils.getUserInfo().userId,
           });
         }
       };
@@ -1389,6 +1390,7 @@ class MeetingRoom extends Component {
                     meetingRoomSocket.sendToPeer('answer', sdp, {
                       local: getSocket().id,
                       remote: socketID,
+                      userId: userUtils.getUserInfo().userId,
                     });
                   });
                 },
