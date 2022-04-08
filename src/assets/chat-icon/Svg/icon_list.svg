@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    width="24" height="24"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    id="Your_Icon"
+    xml:space="preserve"
+    viewBox="0 0 100 100"
+    version="1.1"
+  >
+<circle
+      cy="26.545"
+      cx="18.132"
+      r="7.131"
+  />
+<rect
+      y="21.486"
+      x="33.619"
+      height="10.118"
+      width="56.292"
+  />
+<circle
+      cy="51.219"
+      cx="18.132"
+      r="7.131"
+  />
+<rect
+      y="46.159"
+      x="33.619"
+      height="10.118"
+      width="56.292"
+  />
+<circle
+      cy="76.033"
+      cx="18.132"
+      r="7.131"
+  />
+<rect
+      y="70.975"
+      x="33.619"
+      height="10.117"
+      width="56.292"
+  />
+<metadata
+    ><rdf:RDF
+      ><cc:Work
+        ><dc:format
+          >image/svg+xml</dc:format
+        ><dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        /><cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        /><dc:publisher
+          ><cc:Agent
+              rdf:about="http://openclipart.org/"
+            ><dc:title
+              >Openclipart</dc:title
+            ></cc:Agent
+          ></dc:publisher
+        ></cc:Work
+      ><cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        ><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        /></cc:License
+      ></rdf:RDF
+    ></metadata
+  ></svg
+>

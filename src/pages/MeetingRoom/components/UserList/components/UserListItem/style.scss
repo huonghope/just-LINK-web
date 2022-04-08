@@ -1,0 +1,66 @@
+.user-list-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 7px 10px 7px 13px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #dfe5ec;
+  order: 10000;
+}
+#my-profile{
+  .user-list-mic svg{
+    cursor: auto !important;
+  }
+  .user-list-cam svg{
+    cursor: auto !important;
+  }
+}
+.user-list-profile {
+  display: flex;
+  align-items: center;
+
+  .user-list-avatar {
+    margin-right: 12px;
+  }
+
+  .user-list-name {
+    margin-top: -1px;
+    font-size: 15px;
+    width: 135px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.user-list-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  width: 34%;
+}
+
+.user-more-options-list {
+  min-width: 126px;
+  position: absolute;
+  right: 12px;
+  padding: 3px 6px;
+  border: 1px solid #959cb4;
+  border-radius: 6px;
+  background-color: #f3f3f1;
+  text-align: left;
+  color: #33333f;
+  font-size: 14px;
+
+  ul li {
+    padding: 8px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #0b84f4;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+  }
+}

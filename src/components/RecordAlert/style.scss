@@ -1,0 +1,101 @@
+.container-alert{
+    width: 400px;
+    height: 200px;
+    background: white;
+    padding: 10px;
+
+    border-radius: 10px;
+    text-align: center;
+    // margin-top: 15%;
+
+    animation: animation 0.7s ease-out;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation: animation 0.7s ease-out;
+    -webkit-animation: animation 0.7s ease-out;
+    -o-animation: animation 0.7s ease-out;
+    
+    position: relative;
+
+    top: 50%;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+
+    .clear-icon{
+        // float: right;
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+    }
+    &__title{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    &__btn1{
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        button{
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background: blue;
+
+            border-radius: 5px;
+            min-width: 130px;
+            min-height: 40px;
+            width: 45%;
+
+            &:hover{
+                box-shadow: 0 0 10px #ccc;
+            }
+        }
+    }
+    &__btn2{
+        button{
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+
+            border-radius: 5px;
+            min-width: 130px;
+            min-height: 40px;
+            background: blue;
+            width: 100%;
+
+            &:hover{
+                box-shadow: 0 0 10px #ccc;
+            }
+        }
+    }
+}
+@keyframes animation{
+    from { 
+        top: 0%;
+    }
+    to { 
+        top: 50%;
+    }   
+}
+
+@-moz-keyframes animation {
+    from { 
+        top: 0%;
+    }
+    to { 
+        top: 50%;
+    }   
+}
+
+@-webkit-keyframes animation {
+    from { 
+        top: 0%;
+    }
+    to { 
+        top: 50%;
+    }   
+}
+

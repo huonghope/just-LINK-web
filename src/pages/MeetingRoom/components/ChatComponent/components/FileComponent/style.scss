@@ -1,0 +1,139 @@
+.file-type {
+  &__message {
+    display: flex;
+    align-items: center;
+    max-width: 203px;
+    word-break: break-all;
+    padding: 10px 15px;
+  }
+  &__name {
+    color: #2a2b37;
+    font-size: 14px;
+  }
+
+  &__size {
+    font-size: 14px;
+    padding: 2px 0;
+    margin-right: 7px;
+    font-weight: 550;
+  }
+
+  &__save {
+    display: flex;
+    width: 145px;
+    min-width: 145px;
+    justify-content: space-between;
+    padding: 2px 0;
+    margin-right: 7px;
+    font-weight: 500;
+
+    &__default {
+      cursor: pointer;
+    }
+
+    &__bar {
+      margin-top: -1px;
+    }
+
+    &__other {
+      cursor: pointer;
+    }
+  }
+
+  &__cancel {
+    cursor: pointer;
+    color: #9098b1;
+    font-weight: 900;
+  }
+
+  &__progress-bar {
+    cursor: pointer;
+
+    .CircularProgressbar-path {
+      stroke-width: 4;
+    }
+
+    .CircularProgressbar-trail {
+      stroke-width: 4;
+    }
+
+    .CircularProgressbar-text {
+      font-weight: 300;
+    }
+  }
+  &__time {
+    white-space: pre-line;
+    color: #a4aabf;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+.self .file-type {
+  display: flex;
+  &__message {
+    background-color: #027ff3;
+    color: #fefeff;
+    border-radius: 25px 2px 25px 25px;
+    order: 2;
+  }
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    padding: 0 10px;
+    order: 1;
+  }
+  &__size {
+    color: #ffffff;
+  }
+  &__save {
+    &__default {
+      color: #ffffff;
+    }
+    &__bar {
+      color: #ffffff;
+    }
+    &__other {
+      color: #ffffff;
+    }
+  }
+}
+
+.other .file-type {
+  display: flex;
+
+  &__avatar {
+    padding: 0 10px;
+  }
+
+  &__message {
+    background-color: #eff1f5;
+    color: #42434e;
+    border-radius: 2px 25px 25px 25px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+  }
+
+  &__size {
+    color: #9198b1;
+  }
+
+  &__save {
+    &__default {
+      color: #027ff3;
+    }
+
+    &__bar {
+      color: #bfc4d3;
+    }
+
+    &__other {
+      color: #9198b1;
+    }
+  }
+}

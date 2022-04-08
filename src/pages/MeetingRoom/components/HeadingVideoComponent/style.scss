@@ -1,0 +1,134 @@
+.heading-container{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .heading-container__task{
+    z-index: 99;
+    > ul {
+      display: flex;
+      align-items: center;
+      > li {
+        color: white;
+        font-weight: 500;
+        margin: 0px 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .heading-stream__controller{
+    .heading-container__small{
+      span{
+        display: none !important;
+      }
+    }
+  }
+} 
+
+@keyframes animation{
+  from { 
+      top: 0%;
+  }
+  to { 
+      top: 50%;
+  }   
+}
+
+@-moz-keyframes animation {
+  from { 
+      top: 0%;
+  }
+  to { 
+      top: 50%;
+  }   
+}
+
+@-webkit-keyframes animation {
+  from { 
+      top: 0%;
+  }
+  to { 
+      top: 50%;
+  }   
+}
+
+@keyframes animationTransformDown{
+  from {
+    transform: translateY(calc(-50%));
+    display: none;
+  }
+  to {
+    display: block;
+    transform: translateY(calc(25%))
+  }
+}
+
+@keyframes animationTransformHiddenDown{
+  from {
+    transform: translateY(calc(50%));
+    display: none;
+  }
+  to {
+    display: block;
+    transform: translateY(calc(-50% + 10px))
+  }
+}
+
+@-moz-keyframes animationTransform {
+  from {
+      top: 0%;
+  }
+  to {
+      top: 50%;
+  }
+}
+
+@-webkit-keyframes animationTransform {
+  from {
+      top: 0%;
+  }
+  to {
+      top: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading-stream__controller{
+    span{
+      font-size: 9px;
+    }
+    .request-task button{
+      font-size: 9px;
+    }
+    .course-name{
+      font-size: 15px;
+    }
+  }
+} 
+// @media only screen and (max-width: 840px) {
+//   .heading-col:nth-child(1){
+//     display: none;
+//   }
+// } 
+@media only screen and (max-width: 735px) {
+  .heading-stream__controller{
+    .heading-container__small{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .course-name{
+    display: none;
+  }
+} 
+@media only screen and (max-width: 520px) {
+  .heading-stream__controller{
+    .heading-container__small{
+      .heading-col{
+        display: none;
+      }
+    }
+  }
+} 

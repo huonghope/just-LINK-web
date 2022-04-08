@@ -1,0 +1,113 @@
+{
+  "lang": "vn",
+  "landingPage": {
+    "title": "Cài Đặt",
+    "cameraLabel": "카메라",
+    "cameraOption": [
+      "ON",
+      "OFF"
+    ],
+    "cameraDetectionNone": "인식되는 카메라가 없습니다.",
+    "micLabel": "마아크",
+    "micOption": [
+      "ON",
+      "OFF"
+    ],
+    "micDetectionNone": "인식되는 마이크가 없습니다.",
+    "nickNameLabel": "닉네임",
+    "passwordLabel": "방 암호화",
+    "passWarning": "최소 4자리 이상",
+    "buttonList": [
+      "취소",
+      "입장"
+    ],
+    "joinRoomRequestMessage": {
+      "submitAlert": "호스트에 참가 요청을 보냈습니다.",
+      "getHostError": "통신에 실패했습니다. 새로고침(F5)을 해주세요.",
+      "offlineMes": "호스트가 오프라인 상태입니다.",
+      "passwordErrorMes": "비밀번호가 일치하지 않습니다.",
+      "notExistsMes": "해당 룸이 호스트를 존재하지 않으니 참가 못합니다. 다시 획인해 주세요.",
+      "deny": "호스트가 참가 요청을 거절했습니다.",
+      "roomSettingError": "방의 정보를 설정 시 오류를 발행하니 다시 접속 해주세요.",
+      "error": "예상할 수 없는 오류를 발생합니다. 관리자한테 문의해주세요.",
+      "socketConnectError": "통신하기 위한 Socket객체 생성 실패합니다. 다시 새로고침을 해주세요."
+    }
+  },
+  "mainPage": {
+    "mainComponent": {},
+    "headerComponent": {
+      "roomInfoContainer": {
+        "title": "정보",
+        "roomName": "이름",
+        "rommPassword": "암호",
+        "roomlink": "초대링크",
+        "copyLinkMes": "링크가 복사되었습니다."
+      },
+      "roomModeContainer": {
+        "title": "화면모드",
+        "disableMessage": "현재 참여자수로 인해 해당 모드를 변경할 수 없습니다."
+      },
+      "recordSupport": {
+        "title": "녹화 안내"
+      }
+    },
+    "videoComponent": {
+      "functionList": {
+        "changeNickName": "닉네임 바꾸기",
+        "upResoluation": "화질개선",
+        "directMessage": "메시지 보내기",
+        "shareHost": "발표/화면공유 권한 부여",
+        "requestLeave": "강퇴시키기"
+      }
+    },
+    "chatingComponent": {
+      "enablePlaceholder": "메시지를 입력해주세요.",
+      "disablePlaceholder": "채팅 금지 상태입니다.",
+      "buttonText": "전송",
+      "errorMessage": {
+        "fileUpdateError": "해당 파일은 전송할 수 없습니다.",
+        "fileUpdateLimitError": "파일공유 용량제한은 100MB이하 입니다."
+      }
+    },
+    "userListComponent": {
+      "title": "참가자",
+      "userOptionList": {
+        "nicknameChange": "닉네임 바꾸기",
+        "sendMessage": "메시지보내기",
+        "grantShareScreen": "발표/화면공유 권한 부여",
+        "cantShareScreen": "발표/화면공유 권한 회수",
+        "requestOutRoom": "강퇴시키기"
+      }
+    },
+    "tabComponent": {
+      "mic": {
+        "title": "마이크"
+      },
+      "camera": {
+        "title": "카메라"
+      },
+      "screenShareOption": {
+        "enable": "화면공유",
+        "disable": "화면공유 중지"
+      },
+      "whiteBoardOption": {
+        "enable": "캔버스",
+        "disable": "캔버스 중지"
+      },
+      "chating": {
+        "title": "채팅"
+      },
+      "participant": {
+        "title": "참가자"
+      },
+      "end": {
+        "title": "종료",
+        "questionMesTitle": "회의를 종료하시겠습니까?",
+        "questionMesWarning": "참가자가 남아있는 경우 모두 퇴장됩니다."
+      }
+    }
+  },
+  "common": {
+    "developpingMessage": "기능을 개발 중 입니다."
+  }
+}

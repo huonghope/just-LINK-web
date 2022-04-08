@@ -1,0 +1,26 @@
+.setting-dialog{
+  &__cam-setting, &__mic-setting{
+    border-radius: 10px;
+    background: #037FF3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    p{
+      font-size: 13px;
+      width: max-content;
+      margin-right: 5px;
+    }
+    select {
+      width: 200px;
+      border-radius: 5px;
+      background: #037FF3;
+      color: white;
+      padding: 5px;
+      border-color: white;
+      font-size: 13px;
+      font-weight: 100;
+    }
+  }
+  
+}

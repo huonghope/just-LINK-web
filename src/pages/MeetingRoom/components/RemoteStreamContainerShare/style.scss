@@ -1,0 +1,110 @@
+.remote-list-user{
+  position: fixed;
+  z-index: 99;
+
+  right: 20px;
+  top: 200px;
+  > ul {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      > li{
+        position: relative;
+        width: 170px;
+        height: 100px;
+        margin-bottom: 5px;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+          .user-info-video{
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            
+            width: 87px;
+            height: 30px;
+          
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 4px;
+            background-color: rgba(18, 20, 33, 0.9);
+
+            color: white;
+            ul{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                font-size: 12px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: -0.36px;
+                text-align: center;
+                color: #fff;
+                p{
+                  max-width: 53px;
+                  white-space: nowrap; 
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+                svg{
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+      }
+  }
+  .action-button{
+      height: 10%;
+      text-align: right;
+      button{
+          background-color: transparent;
+          width: fit-content;
+          border: none;
+          svg{
+            cursor: pointer;
+          }
+      }
+  }
+}
+.view-list-user{
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: #121421;
+  border: none;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 1042) {
+  .remote-stream__container {
+      .list-videos {
+          video{
+              object-fit: contain;
+          }
+      }
+  }
+} 

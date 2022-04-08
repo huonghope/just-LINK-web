@@ -1,0 +1,290 @@
+.meeting-room {
+  position: relative;
+  background: black;
+
+  .heading-task {
+    height: 3vh;
+    z-index: 99;
+  }
+  .slide-stream {
+    // position: absolute;
+    z-index: 99;
+    // height: 150px;
+  }
+
+  /**
+   *  Use slide transition effect to switch the chat window
+   */
+  $chat-window-width: 318.88px;
+
+  .chatting {
+    height: 92%;
+    min-height: 620px;
+    height: 620px;
+    width: $chat-window-width;
+    max-width: $chat-window-width;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    z-index: 100;
+  }
+
+  .chat-slide-enter,
+  .chat-slide-exit {
+    overflow: hidden;
+    transition: width 240ms ease-out;
+  }
+
+  // Entering
+  .chat-slide-enter {
+    width: 0;
+  }
+  // Entered
+  .chat-slide-enter-active {
+    width: $chat-window-width;
+  }
+  // Exiting
+  .chat-slide-exit {
+    width: $chat-window-width;
+  }
+  // Exited
+  .chat-slide-exit-active {
+    width: 0;
+  }
+
+  /**
+   *  Use slide transition effect to switch the user list
+   */
+  $user-list-width: 318.88px;
+
+  .user-list {
+    width: $user-list-width;
+    max-width: $user-list-width;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transition: right 240ms ease-out;
+    z-index: 100;
+  }
+
+  .user-list-slide-enter,
+  .user-list-slide-exit {
+    overflow: hidden;
+    transition: width 240ms ease-out;
+  }
+  // Entering
+  .user-list-slide-enter {
+    width: 0;
+  }
+  // Entered
+  .user-list-slide-enter-active {
+    width: $user-list-width;
+  }
+  // Exiting
+  .user-list-slide-exit {
+    width: $user-list-width;
+  }
+  // Exited
+  .user-list-slide-exit-active {
+    width: 0;
+  }
+
+  .remote-stream{
+    width: 100vw;
+    height: 94vh;
+    z-index: 99;
+  }
+  .footer-task{
+    position: absolute;
+    bottom: 20px;
+    z-index: 99;
+    left: 50%;
+    width: 70vw;
+    transform: translateX(-50%);
+  }
+}
+
+// .setting-dialog {
+//   &__content{
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//   }
+
+//   &__title{
+//     font-size: 30px;
+//     font-weight: bold;
+//     color: var(--text-bright-gray);
+//     margin-bottom: 30px;
+//   }
+
+//   &__select select{
+//     font-size: 13px;
+//     border-radius: 4px;
+//     border: solid 1px var(--line-geyser);
+//     height: 42px;
+//     color: var(--text-bright-gray);
+//     padding: 0 20px;
+//     width: 100%;
+//   }
+
+//   &__text{
+//     letter-spacing: -0.5px;
+//     padding-bottom: 10px;
+//     color: var(--text-bright-gray);
+//   }
+//   &__mic-setting{
+//     margin-bottom: 15px;
+//   }
+// }
+
+.test-btn{
+  position: absolute;
+  z-index: 80;
+}
+.btn-next{
+  top: 45%;
+  right: 20px;
+  
+}
+.btn-pre{
+  top: 55%;
+}
+.btn-logo{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+
+  background-color: #121421;
+  color: white;
+  font-weight: 100;
+
+  border: none;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  &:hover{
+    opacity: 0.7;
+    background-color: #037ff3 !important;
+  }
+}
+@keyframes animationTransform{
+  from {
+    transform: translateY(calc(50%));
+    display: none;
+  }
+  to {
+    display: block;
+    transform: translateY(calc(-10%))
+  }
+}
+
+@keyframes animationTransformHidden{
+  from {
+    transform: translateY(calc(50%));
+    display: none;
+  }
+  to {
+    display: block;
+    transform: translateY(calc(-50% + 10px))
+  }
+}
+
+@-moz-keyframes animationTransform {
+  from {
+      top: 0%;
+  }
+  to {
+      top: 50%;
+  }
+}
+
+@-webkit-keyframes animationTransform {
+  from {
+      top: 0%;
+  }
+  to {
+      top: 50%;
+  }
+}
+
+/**============================== Mobile========================**/
+.meeting-room__mobile{  
+  position: relative;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+
+  .heading-task {
+    height: 3vh;
+    z-index: 99;
+  }
+  .remote-stream{
+    width: 100vw;
+    height: 50vh;
+    z-index: 99;
+  }
+  .footer-task{
+  //  display: none;
+  position: absolute;
+  bottom: 20px;
+  z-index: 99;
+  left: 50%;
+  width: 70vw;
+  transform: translateX(-50%);
+  }
+  /**List Video**/
+  .list-videos{
+    div{
+      display: none;
+    }
+    div > div:nth-child(1){
+      margin-top: 50px;
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  /**Video Item**/
+  .video-item-remote{
+    .stream-info{
+      display: none;
+    }
+  }
+  .btn-logo{
+    display: none;
+  }
+
+  /** User list **/
+  .user-list{
+    position: absolute;
+    z-index: 999;
+  }
+  /** Chatting **/
+  .chatting{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    height: 80vh;
+  }
+}
+/** Responsive page */
+@media only screen and (max-width: 1200px) {
+ .footer-task{
+    width: 80vw !important;
+ }
+}
+
+@media only screen and (max-width: 1010px) {
+  .footer-task{
+     width: 90vw !important;
+  }
+ }

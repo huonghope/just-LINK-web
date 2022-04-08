@@ -1,0 +1,402 @@
+.chat__component {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  $chat-border-radius: 15px;
+  border: 1px solid #ffffff;
+  border-radius: $chat-border-radius;
+
+  .chat-top {
+    height: 6%;
+    padding: 10px;
+    background-color: #ffffff;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff #ffffff #d8dfe8;
+    border-radius: $chat-border-radius $chat-border-radius 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .user {
+      width: 55%;
+      display: flex;
+
+      .username-string {
+        max-width: 90%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #0580f3;
+        font-size: 15px;
+      }
+
+      .user-number {
+        color: #9198b1;
+        margin-left: 4px;
+        font-size: 15px;
+      }
+    }
+
+    .toolbar {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+
+      .chat-room-collapse {
+        color: #949bb3;
+        margin-top: -2px;
+        cursor: pointer;
+      }
+
+      .chat-opacity-bar {
+        width: 60px;
+        display: flex;
+        align-items: center;
+
+        input {
+          -webkit-appearance: none;
+          width: 100%;
+          border-radius: 8px;
+          height: 3px;
+          outline: none;
+          transition: background 450ms ease-in;
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            border: 1px solid #989fb6;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .chat-content {
+    height: 81%;
+    min-height: 70%;
+
+    .chat-rows {
+      padding: 10px 0;
+      list-style: none;
+      background: none;
+      height: 100%;
+      max-height: 100%;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      font-size: 14px;
+
+      li {
+        padding: 0.3rem 0.2rem;
+        overflow: hidden;
+        display: flex;
+        height: auto;
+      }
+
+      .msg-type {
+        display: flex;
+
+        &__right {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__message-info {
+          display: flex;
+        }
+
+        &__direct {
+          font-weight: 300;
+          margin-bottom: 5px;
+        }
+
+        &__time {
+          white-space: pre-line;
+          color: #a4aabf;
+          font-size: 10px;
+          font-weight: normal;
+        }
+      }
+
+      .self {
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .self .msg-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &__message {
+          background-color: #027ff3;
+          color: #fefeff;
+          border-radius: 25px 2px 25px 25px;
+          padding: 10px 15px;
+          word-break: break-all;
+          white-space: pre-wrap;
+          order: 2;
+        }
+
+        &__info {
+          display: flex;
+          align-items: flex-end;
+          text-align: right;
+          padding: 0 10px;
+          order: 1;
+        }
+      }
+
+      .self .msg-request {
+        width: 100%;
+
+        &__heading {
+          display: flex;
+          padding: 6px 0;
+          flex-direction: row;
+          border-radius: 5px;
+          width: 100%;
+          font-size: 12px;
+          text-align: center
+        }
+
+        &__content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 20px;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &__warning {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        span {
+          display: inline-block;
+          font-weight: normal;
+          margin-left: 5px;
+        }
+      }
+
+      .other .msg-type {
+        display: flex;
+
+        &__avatar {
+          padding: 0 10px;
+        }
+
+        &__message {
+          background-color: #eff1f5;
+          color: #42434e;
+          border-radius: 2px 25px 25px 25px;
+          padding: 10px 15px;
+          word-break: break-all;
+          white-space: pre-wrap;
+        }
+
+        &__info {
+          display: flex;
+          align-items: flex-end;
+          padding-left: 10px;
+        }
+      }
+
+      .other .msg-request {
+        width: 100%;
+
+        &__heading {
+          display: flex;
+          padding: 6px 0;
+          flex-direction: row;
+          border-radius: 5px;
+          width: 100%;
+          font-size: 12px;
+          text-align: center;
+          justify-content: center;
+
+          span {
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .chat-form {
+    height: 10%;
+    min-height: 10%;
+    max-height: 24%;
+    background-color: #f1f2f6;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c8d3df #f1f2f6 #f1f2f6;
+    border-radius: 0 0 $chat-border-radius $chat-border-radius;
+
+    .chat-direct-message {
+      height: 10px;
+      min-height: 10px;
+      font-size: 10px;
+      margin-left: 10px;
+      color: red;
+    }
+
+    form {
+      height: 100%;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    textarea {
+      margin-top: 10px;
+      resize: none;
+      flex-grow: 2;
+      border: none;
+      font-size: 15px;
+      background-color: #f1f2f6;
+      color: #373844;
+
+      &::placeholder {
+        color: #9ca3ba;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 14px;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-size: 14px;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+      font-size: 14px;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 14px;
+    }
+
+    .line-break {
+      width: 100%;
+    }
+
+    .footer-icon {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+
+      .footer-icon-left {
+        display: flex;
+        justify-content: space-between;
+        width: 15%;
+      }
+
+      .footer-icon-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 28%;
+      }
+    }
+
+    button {
+      border: transparent;
+      background: #027ff3;
+      color: white;
+      border-radius: 32px;
+      padding: 7px 13px;
+      cursor: pointer;
+    }
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: center;
+
+    button {
+      background: white;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 7px 15px;
+      border-radius: 5px;
+      margin-right: 5px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+  }
+
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari/Edge */
+    color: #3c4456;
+    /*styles here*/
+  }
+
+  input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #3c4456;
+    /*styles here*/
+  }
+
+  input:-ms-input-placeholder { /* IE 10+ */
+    color: #3c4456;
+    /*styles here*/
+  }
+
+  ::-webkit-scrollbar {
+  }
+
+  ::-webkit-scrollbar {
+    min-width: 12px;
+    width: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    height: 12px;
+    max-height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(48, 87, 158);
+    border-radius: 100px;
+    border: solid 3px #e5e5e5;
+    box-shadow: inset 0 0 3px #999;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+    box-shadow: inset 0 0 3px #888;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #aaa;
+    box-shadow: inset 0 0 3px #7f7f7f;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: block;
+    height: 26px;
+  }
+}

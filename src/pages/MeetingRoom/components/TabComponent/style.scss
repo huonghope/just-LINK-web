@@ -1,0 +1,294 @@
+.task-controller {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  .task-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    border-radius: 50px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .task-view {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    // position: absolute;
+    // right: 0px;
+  }
+
+  .room-out-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(203, 92, 63, .7);
+    cursor: pointer;
+
+    // border: 0.1875em solid #0F1C3F;
+    color: white;
+    font-weight: 500;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    right: 0;
+    transform: translateX(110%);
+  }
+
+  .heading-col {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+  }
+
+  .heading-col ul {
+    width: 85%;
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    align-items: center;
+
+    li {
+      color: white;
+      font-weight: 500;
+      text-align: center;
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+      align-items: center;
+
+      height: 100%;
+
+      img {
+        cursor: pointer;
+      }
+
+      span {
+        margin-left: 10px;
+        display: block;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.5px;
+        font-weight: 10;
+        // &:hover{
+        //   color: $hover-task-color;
+        // }
+      }
+
+      $hover-task-color: #32f62e;
+      &:hover > span{
+        color: $hover-task-color;
+      }
+      
+      &:hover>.cam-svg {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+
+      &:hover>.mic-svg {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+
+      &:hover>.share-screen-svg {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+
+      &:hover>.whiteboard-svg {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+
+      &:hover>.chat-svg {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+
+      &:hover>.list-user {
+        path {
+          fill: $hover-task-color;
+        }
+      }
+    }
+
+    .btn-white {
+      position: relative;
+
+      .badge-chat{
+        position: absolute;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: 2em;
+        min-width: 2em;
+        
+        background: #027ff3;
+        border-radius: 50%;
+
+        color: #fff;
+        font-size: 0.77em;
+        font-weight: 400;
+        line-height: 1;
+
+        right: -35px;
+        top: 15px;
+      }
+      .badge-chat-hidden{
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+      }
+    }
+  }
+
+  .record-time {
+
+    width: 60px;
+    height: 60px !important;
+
+    color: red;
+    border: 1px solid red;
+    border-radius: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: -20px;
+
+    h1 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1010px) {
+  .task-controller{
+    width: 90%;
+  }
+  .heading-col ul {
+    width: 85%;
+    display: flex;
+    padding: 0 10px !important;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .task-controller {
+    .heading-col {
+      ul {
+        li span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .room-out-btn{  
+    height: 3.5em !important;
+    width: 3.5em !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 450px) {
+  .room-out-btn{  
+    height: 3em !important;
+    width: 3em !important;
+  }
+ 
+}
+
+// 일단 모바일 이렇게 했음
+@media only screen and (max-width: 450px) {
+  // .task-controller{
+  //   display: none;
+  // }
+  .task-controller {
+    .room-out-btn{  
+      height: 2em !important;
+      width: 2em !important;
+      p{
+        display: none;
+      }
+    }
+    .heading-col ul li:nth-child(3){
+      display: none;
+    }
+    .heading-col ul li:nth-child(4){
+      display: none;
+    }
+    .heading-col ul li:nth-child(5){
+      // display: none;
+    }
+  }
+}
+
+@keyframes animation {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: 50%;
+  }
+}
+
+@-moz-keyframes animation {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes animation {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: 50%;
+  }
+}
