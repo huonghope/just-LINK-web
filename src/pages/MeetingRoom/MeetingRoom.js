@@ -2221,13 +2221,11 @@ class MeetingRoom extends Component {
       this.setState((prevState) => {
         return {
           isGuestSharingScreen: true,
-          // remoteStreams: [...prevState.remoteStreams, remoteStreamTemp],
           guestShareScreen: remoteStreamTemp,
         };
       });
       this.props.dispatch(tabComponentAction.handleChangeShareScreenState(true));
 
-      // meetingRoomSocket.sendToPeer('user-share-screen', {status: true});
       // ! 일반 쉬는시간을 걸러, 다만 체크할 필요함
       await configSocketShare();
       getSocketShare().on('connect', () => {
