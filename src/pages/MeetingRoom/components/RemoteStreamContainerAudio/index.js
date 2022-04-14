@@ -67,16 +67,7 @@ class RemoteStreamContainerAudio extends Component {
 const AudioItem = ({audioTrack, userInfo}) => {
   const userInfoStore = userUtils.getUserInfo();
   let isSelfStream = userInfo && userInfo.user_idx === userInfoStore.userId;
-  if (isSelfStream) {
-    return (
-      <StreamAudioComponentSelf
-        audioType="localAudio"
-        audioTrack={audioTrack}
-        userInfo={userInfo}
-        isSelfStream={isSelfStream}
-      />
-    );
-  } else {
+  if (!isSelfStream) {
     return (
       <StreamAudioComponentRemote
         audioType="remoteAudio"
@@ -85,6 +76,7 @@ const AudioItem = ({audioTrack, userInfo}) => {
       />
     );
   }
+  return <></>;
 };
 
 const setAudios = (remoteStreams) => {

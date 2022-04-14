@@ -2,12 +2,8 @@ import React, {Component, useState, useEffect} from 'react';
 import {connect, useDispatch, useSelector} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import styled from 'styled-components';
-import moment from 'moment';
 import './style.scss';
-
 import meetingRoomSelect from '../../MeetingRoom.Selector';
-
-import remoteStreamSelector from './RemoteStreamContainer.Selector';
 import {getSocket} from '../../../rootSocket';
 import Icon from '../../../../constants/icons';
 import StreamVideoComponentRemote from '../StreamVideoComponentRemote';

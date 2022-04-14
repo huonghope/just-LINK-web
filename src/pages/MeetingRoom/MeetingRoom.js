@@ -463,6 +463,7 @@ class MeetingRoom extends Component {
       meetingRoomSocket.sendToPeer('edit-stream-slide', {
         remoteStreams: remoteStreams,
         type: 'up',
+        streamType: 'device',
       });
     }
   }
@@ -561,6 +562,7 @@ class MeetingRoom extends Component {
               meetingRoomSocket.sendToPeer('edit-stream-slide', {
                 remoteStreams: nextListRemoteStreamsTemp,
                 type: 'down',
+                streamType: 'device',
               });
             }
           }
@@ -584,6 +586,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('edit-stream-slide', {
             remoteStreams: diffUp,
             type: 'up',
+            streamType: 'device',
           });
         }
         // ! 다른유저는 해상도 낮고 있지만, 또 다시 요청함
@@ -592,6 +595,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('edit-stream-slide', {
             remoteStreams: diffDown,
             type: 'down',
+            streamType: 'device',
           });
         }
       }
@@ -655,6 +659,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('edit-stream-slide', {
             remoteStreams: diffUp,
             type: 'up',
+            streamType: 'device',
           });
         }
 
@@ -663,6 +668,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('edit-stream-slide', {
             remoteStreams: diffDown,
             type: 'down',
+            streamType: 'device',
           });
         }
       }
@@ -990,7 +996,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeer('candidate', e.candidate, {
             local: getSocket().id,
             remote: socketID,
-            userId: userUtils.getUserInfo().userId,
+            streamType: 'device',
           });
         }
       };
@@ -1390,6 +1396,7 @@ class MeetingRoom extends Component {
                     meetingRoomSocket.sendToPeer('answer', sdp, {
                       local: getSocket().id,
                       remote: socketID,
+                      streamType: 'device',
                       userId: userUtils.getUserInfo().userId,
                     });
                   });
@@ -2156,6 +2163,7 @@ class MeetingRoom extends Component {
           meetingRoomSocket.sendToPeerForSocketShare('candidate', e.candidate, {
             local: getSocketShare().id,
             remote: socketID,
+            streamType: 'screen',
           });
         }
       };
@@ -2264,6 +2272,8 @@ class MeetingRoom extends Component {
                       meetingRoomSocket.sendToPeer('answer', sdp, {
                         local: getSocketShare().id,
                         remote: socketID,
+                        streamType: 'screen',
+                        userId: userUtils.getUserInfo().userId,
                       });
                     });
                   },
